@@ -27,13 +27,11 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main_activity)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         binding.bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
@@ -61,11 +59,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun replaceFragment(fragment: Fragment) {
-
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.main_activity, fragment)
-        fragmentTransaction.commit()
+         supportFragmentManager.beginTransaction()
+        .replace(binding.fragmentContainer.id, fragment)
+        .commit()
     }
 
 }
