@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_fragment"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="Home">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/home_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        tools:context=".filmler.MainActivity"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="158dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="102dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Now Playing"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/recyclerViewNow"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Show All"
+                    android:textColor="@android:color/holo_orange_dark"
+                    app:layout_constraintBottom_toTopOf="@+id/recyclerViewTopRated"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton1" />
+
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="39dp"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerViewNow"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTopRated"
+                android:layout_width="407dp"
+                android:layout_height="204dp"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewPopular"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="102dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Now Playing"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/recyclerViewNow"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Show All"
+                    android:textColor="@android:color/holo_orange_dark"
+                    app:layout_constraintBottom_toTopOf="@+id/recyclerViewTopRated"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton1" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="39dp"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerViewNow"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPopular"
+                android:layout_width="419dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginBottom="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerViewTopRated"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.166"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="102dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Now Playing"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/recyclerViewNow"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Show All"
+                    android:textColor="@android:color/holo_orange_dark"
+                    app:layout_constraintBottom_toTopOf="@+id/recyclerViewTopRated"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton1" />
+
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="39dp"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerViewNow"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSoon"
+                android:layout_width="412dp"
+                android:layout_height="139dp"
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewNow"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="102dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Now Playing"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/recyclerViewNow"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Show All"
+                    android:textColor="@android:color/holo_orange_dark"
+                    app:layout_constraintBottom_toTopOf="@+id/recyclerViewTopRated"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton1" />
+
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="39dp"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerViewNow"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewNow"
+                android:layout_width="426dp"
+                android:layout_height="190dp"
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewTopRated"
+                tools:ignore="MissingConstraints" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
